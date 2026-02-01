@@ -53,7 +53,6 @@ export const authenticate = async (req, res, next) => {
 };
 
 export const requireVerification = (req, res, next) => {
-  // Check krega user is verified or not
   if (!req.user.isVerified) {
     return res.status(403).json({
       success: false,
